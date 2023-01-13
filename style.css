@@ -1,0 +1,289 @@
+:root{
+
+  --color-primary-cyan:hsl(179, 62%, 43%);
+  --color-primary-bright-yellow:hsl(71, 73%, 54%);
+  --color-primary-bright-yellow-hover:hsl(71, 73%, 45%);
+
+  --color-primary-second-card:hsl(179, 47%, 52%);
+
+  --color-neutral-light-gray:hsl(204, 43%, 93%);
+  --color-neutral-grayish-blue:hsl(218, 22%, 67%);
+  --white: #fff;
+
+  --font-size-base: 1rem;
+
+  --family-karla: 'Karla', sans-serif;
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+}
+
+/* RESET */
+/* https://github.com/eduardofierropro/Reset-CSS/blob/main/css/app.css NOT ME*/
+
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+
+body{
+  background-color: var(--color-neutral-light-gray);
+  font-family: var(--family-karla);
+  margin: 1.5rem;
+  font-size: var(--font-size-base);
+  
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main__content{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  --content-padding: 1.5rem;
+  max-width: 750px;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  box-shadow: 0px 10px 25px 11px rgba(0,0,0,0.1);
+}
+
+.first__container{
+  background-color: var(--white);
+  padding: var(--content-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+._heading{
+  color: var(--color-primary-cyan);
+  font-weight: var(--fw-700);
+  font-size: 1.2rem;
+}
+
+.paragraph-guarantee{
+  color: var(--color-primary-bright-yellow);
+  font-weight: var(--fw-700);
+}
+
+.paragraph-normal{
+  line-height: 1.7;
+  font-size: 14px;
+  color: var(--color-neutral-grayish-blue);
+}
+
+
+.sub__container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  background-color: var(--color-primary-cyan);
+  padding: var(--content-padding);
+  color: var(--white);
+}
+
+.month-heading{
+  font-weight: var(--fw-700);
+  font-size: 1.2rem;
+}
+
+
+.p-price{
+  color: var(--color-neutral-light-gray);
+  display: flex;
+}
+
+.price{
+  font-weight: var(--fw-700);
+  margin-right: 1rem;
+  font-size: 1.7rem;
+  color: var(--white);
+}
+
+.p-price > .price__month{
+  align-self: center;
+}
+
+.p-access{
+  margin-bottom: 0.5rem;
+}
+
+.signup-button{
+  background-color: var(--color-primary-bright-yellow);
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border-radius: 0.3rem;
+  transition: all 100ms ease-in-out;
+}
+.signup-button:is(:hover, :focus){
+  background-color: var(--color-primary-bright-yellow-hover);
+  outline: none;
+}
+
+.whyus__container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  background-color: var(--color-primary-second-card);
+  padding: var(--content-padding);
+  color: var(--white);
+}
+
+.why-heading{
+  font-weight: var(--fw-700);
+  font-size: 1.2rem;
+}
+
+.why-paragraph{
+  text-align: start;
+  font-size: 14px;
+  width: 65%;
+  color: var(--color-neutral-light-gray);
+  line-height: 1.7;
+}
+
+@media screen and (min-width: 700px){
+
+  body{
+    overflow: hidden;
+  }
+
+  .first__container{
+    padding: 3rem;
+  }
+
+  .second__container{
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .sub__container{
+    width: 95%;
+    padding: 3rem;
+  }
+
+  .signup-button{
+    width: 90%;
+  }
+
+  .price{
+    font-size: 2rem;
+  }
+
+  .whyus__container{
+    width: 100%;
+    padding: 3rem;
+  }
+  .why-paragraph{
+    width: 66%;
+  }
+
+  .size{
+    font-size: 1.4rem;
+  }
+
+  ._heading{
+    margin-bottom: 0.4rem;
+  }
+  .paragraph-guarantee{
+    font-size: 1.2rem;
+  }
+  .paragraph-normal{
+    font-size: 1rem;
+  }
+
+}
